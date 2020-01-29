@@ -22,11 +22,4 @@ const CHARACTERS = {
     ]
 }
 
-export default function character(state = CHARACTERS, action) {
-    if (action.type === 'SELECT_CHARATER'){  debugger;
-        return { ...state,
-            activeCharacter: action.character, 
-        };
-    }
-    return state;
-}
+export default CHARACTERS;
