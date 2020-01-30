@@ -2,8 +2,7 @@ import React from 'react';
 
 const CharacterSelected = ({activeCharacter}) => (
     <div>
-        <p>something</p>
-        {/* <img src={activeCharacter.image} /> */}
+        {<img src={activeCharacter.image} alt={activeCharacter.name} />}
     </div>  
 );
 

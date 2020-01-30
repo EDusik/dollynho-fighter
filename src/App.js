@@ -22,12 +22,12 @@ class App extends Component {
     return (
       <>
         <CharContext.Provider value={this.state}>
-          <CharacterSwitcher characters={this.state.characters} toggleChar={this.toggleChar} />
-            <CharContext.Consumer>
-              {char => 
-                  <CharacterSelected character={char} />   
-              }
-            </CharContext.Consumer>        
+          <CharContext.Consumer>
+            {char => 
+              <CharacterSelected activeCharacter={this.state.character} />   
+            }
+          </CharContext.Consumer>
+          <CharacterSwitcher characters={this.state.characters} toggleChar={this.toggleChar} />        
         </CharContext.Provider>
       </>
     )
