@@ -6,8 +6,8 @@ const CHARACTERS = {
             name: 'Dollynho', 
             image: 'https://ffmkt.files.wordpress.com/2010/10/dollynho.jpg',
             movements: [
-                { damage: 10, title: 'Ficar amiguinho' },
-                { damage: 10, title: 'Beber muito líquido' },
+                { damage: 10, movement: 'Ficar amiguinho' },
+                { damage: 10, movement: 'Beber muito líquido' },
             ]
         },
         { 
@@ -15,8 +15,8 @@ const CHARACTERS = {
             name: 'Dollynho Pedreiro', 
             image: 'https://pm1.narvii.com/6320/c012ee8a0ee1bdbae9a167ed219ece05fa157604_hq.jpg',
             movements: [
-                { damage: 10, title: 'Fazer reboco' },
-                { damage: 10, title: 'Procurar trinca ferro' },
+                { damage: 10, movement: 'Fazer reboco' },
+                { damage: 10, movement: 'Procurar trinca ferro' },
             ]
         },
     ]
