@@ -5,6 +5,8 @@ import CharacterSelected from './components/character-selected';
 import CharacterSwitcher from './components/character-switcher';
 import CharContext from './characters/context';
 
+import './App.css';
+
 class App extends Component {
 
   state = {
@@ -20,16 +22,16 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="out-container">
         <CharContext.Provider value={this.state}>
           <CharContext.Consumer>
             {char => 
               <CharacterSelected activeCharacter={this.state.character} />   
             }
           </CharContext.Consumer>
-          <CharacterSwitcher characters={this.state.characters} toggleChar={this.toggleChar} />        
+          <CharacterSwitcher characters={this.state.characters} char={this.state.character} toggleChar={this.toggleChar} />        
         </CharContext.Provider>
-      </>
+      </div>
     )
   }
 }

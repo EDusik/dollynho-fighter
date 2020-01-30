@@ -1,11 +1,9 @@
-.selected{
-    width: 200px;
+img {
     height: 200px;
-    padding: 10px;
-    margin: 0 auto;
-    border: solid black 1px;
+    display: block;
 }
 
-img{
-    height: 200px;
+.centered {
+    margin: 0 auto;
 }
+

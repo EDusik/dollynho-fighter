@@ -1,18 +1,64 @@
-img:hover{
-    cursor: pointer;
-}
-
-.container{
-    max-width: 400px;
+.container {
+    max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
 	border: 1px solid #ccc;
 }
 
-.row{
+.row {
     flex-direction: row;
 }
 
 .item {
 	flex: 1;
+}
+
+.box-select {
+	width: 100px;
+	height: 100px;
+}
+
+img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.colored-false {
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%);
+	margin-right: 2px;
+}
+
+.colored-true {
+	-webkit-filter: grayscale(0%); 
+	filter: grayscale(0%);
+	animation: flash 300ms linear; 
+	outline: 2px solid yellow;
+	margin-right: 2px;
+}
+
+@keyframes flash {
+	0% {
+		filter:brightness(100%);
+	}
+	20% {
+		filter:brightness(150%);
+	}
+	40% {
+		filter:brightness(100%);
+	}
+	60% {
+		filter:brightness(150%);
+	}
+	80% {
+		filter:brightness(100%);
+	}
+	100% {
+		filter:brightness(150%);
+	}
 }
