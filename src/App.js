@@ -1,19 +1,40 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import Characters from  './components/characters/characters'
-import CharacterSelected from  './components/selected/selected'
-import store from './store';
+import React, { Component } from 'react';
+
+import * as char from './characters';
+import CharacterSelected from './components/character-selected';
+import CharacterSwitcher from './components/character-switcher';
+import CharContext from './characters/context';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Provider store={store}>
-        <CharacterSelected />
-        <Characters />
-      </Provider>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    characters: char.CHARACTERS.characters,
+    character: char.CHARACTERS.activeCharacter
+  };
+
+  toggleChar = (character) => {
+    this.setState({
+      character: character
+    })
+  };
+
+  render() {
+    return (
+      <div className="out-container">
+        <CharContext.Provider value={this.state}>
+          <CharContext.Consumer>
+            {char => 
+              <CharacterSelected activeCharacter={this.state.character} />   
+            }
+          </CharContext.Consumer>
+          <CharacterSwitcher characters={this.state.characters} char={this.state.character} toggleChar={this.toggleChar} />        
+        </CharContext.Provider>
+      </div>
+    )
+  }
 }
 
 export default App;
+

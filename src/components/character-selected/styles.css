@@ -1,0 +1,10 @@
+img {
+    height: 200px;
+    display: block;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
