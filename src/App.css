@@ -1,8 +1,31 @@
-.out-container {
-    width: 1200px;
-    margin: 0 auto;
+
+html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 .full-width {
     width: 100%;
 }
+
+.out-container {
+    background: url('./assets/images/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.in-container {
+    max-width: 1074px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+

@@ -1,16 +1,21 @@
 .container {
-    max-width: 1200px;
+    max-width: 1074px;
 	margin: 0 auto;
 	display: flex;
-	border: 1px solid #ccc;
 }
 
 .row {
-    flex-direction: row;
+	flex-direction: row;
+	display: flex;
+    flex-wrap: wrap;
 }
 
 .item {
-	flex: 1;
+	flex: 1 1 200px;
+}
+
+.item {
+	flex: 1 1 200px;
 }
 
 .box-select {
@@ -24,14 +29,16 @@ img {
     margin-right: auto;
 }
 
-img:hover {
-    cursor: pointer;
+.box-select:hover {
+	cursor: pointer;
+	-webkit-filter: grayscale(0%); 
+	filter: grayscale(0%);
 }
 
 .colored-false {
 	-webkit-filter: grayscale(100%); 
 	filter: grayscale(100%);
-	margin-right: 2px;
+	margin: 0 2px 2px 0;
 }
 
 .colored-true {
@@ -39,7 +46,7 @@ img:hover {
 	filter: grayscale(0%);
 	animation: flash 300ms linear; 
 	outline: 2px solid yellow;
-	margin-right: 2px;
+	margin: 0 2px 2px 0;
 }
 
 @keyframes flash {
@@ -61,4 +68,21 @@ img:hover {
 	100% {
 		filter:brightness(150%);
 	}
+}
+
+@media (max-width: 768px) {
+    .row {
+		padding: 0 5px 0 5px;
+	}
+}
+
+.bg-selected {
+    border-radius: 30px;
+    min-height: 200px;
+    padding: 26px;
+	background-color:rgba(30, 30, 30, 0.3)
+}
+
+.height-30 {
+	height: 30vh;
 }
