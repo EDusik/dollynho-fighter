@@ -1,6 +1,6 @@
 <div id="about"> 
 
-# :page_facing_up: About
+## :page_facing_up: About
 These projects was inspired by the union of fighting games like street fighter and the legendary Brazilian character <b>Dolly</b>
 </div>
 
