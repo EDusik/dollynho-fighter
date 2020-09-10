@@ -1,8 +1,13 @@
 import React from 'react';
-import './styles.css';
+
+import { StyledLogo } from '../../styles/StyledLogo';
+
+import logo from '../../assets/images/flat-logo-df.png';
 
 const Logo = () => (  
-    <img src={require('./../../assets/images/dollynho-fighter.png')} alt="Logo" className="logo-img" />
+    <StyledLogo>
+        <img src={logo} alt="Dollynho Fighter" />
+    </StyledLogo> 
 )
 
 export default Logo;

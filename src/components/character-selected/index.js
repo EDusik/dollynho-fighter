@@ -1,7 +1,8 @@
 import React from 'react';
 
 import '../../App.css'
-import './styles.css';
+import './styles.scss';
+import { StyledCharacterSelected } from '../../styles/StyledCharacterSelected';
 
 const renderMovements = (activeCharacter) => {
     if (activeCharacter.id) {
@@ -20,23 +21,29 @@ const renderMovements = (activeCharacter) => {
 }
 
 const CharacterSelected = ({activeCharacter}) => {
+
     if (!activeCharacter.id) {
         return ( 
-            <div className="full-width height-70">
-                 <h1>Selecione um personagem</h1>
-            </div>
+            <StyledCharacterSelected>
+                <div className="full-width">
+                    <h1>Selecione um Dollynho</h1>
+                </div>
+            </StyledCharacterSelected>
         )
     } else {
-        return (  
-            <div className="centered full-width height-70">  
-                <h1>{activeCharacter.name}</h1>
+    
+        return (
+            <StyledCharacterSelected>
+            <div className="centered full-width">  
+                <h2>{activeCharacter.name}</h2>
                 <div className="grid">
-                    <div>
-                        <img className="right dolly-selected" src={activeCharacter.image} alt={activeCharacter.name}  />
+                    <div>             
+                        <img className="right dolly-selected" src={process.env.PUBLIC_URL  + activeCharacter.frame} alt={activeCharacter.name}  />
                     </div>
                     { renderMovements(activeCharacter) }
                 </div>
             </div> 
+            </StyledCharacterSelected>
         )
     }        
 }

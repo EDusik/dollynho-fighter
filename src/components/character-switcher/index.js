@@ -1,20 +1,22 @@
 import React from 'react';
-import './styles.css';
+
+import { StyledCharacterSwitcher } from '../../styles/StyledCharacterSwitcher';
 
 const CharacterSwitcher = ({characters, char, toggleChar}) => (  
-    <div className="height-30">
+    <StyledCharacterSwitcher>
         <div className="bg-selected">
             <div className="container row">
                 {characters.map(character => (  
                     <div key={character.id}>
+                        {console.log(character.image)}
                         <div className="item" onClick={()=> toggleChar(character)}>
-                            {<img src={character.image} alt={character.name} className={`box-select colored-${char === character ? true : false }`} />}
+                        {<img src={process.env.PUBLIC_URL + character.feature} alt={character.name} className={`box-select colored-${char === character ? true : false }`} />}
                         </div>
                     </div>                
                 ))}    
             </div> 
         </div>
-    </div>
+    </StyledCharacterSwitcher>
 )
 
 export default CharacterSwitcher;
