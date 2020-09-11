@@ -9,6 +9,7 @@ const renderMovements = (activeCharacter) => {
         return (     
             <div>
                 <ul className="left">
+                    <h2>{activeCharacter.name}</h2>
                     {activeCharacter.movements.map(char => (
                         <li key={char.movement}>
                             <span>{char.movement}</span>
@@ -35,7 +36,7 @@ const CharacterSelected = ({activeCharacter}) => {
         return (
             <StyledCharacterSelected>
             <div className="centered full-width">  
-                <h2>{activeCharacter.name}</h2>
+             
                 <div className="grid">
                     <div>             
                         <img className="right dolly-selected" src={process.env.PUBLIC_URL  + activeCharacter.frame} alt={activeCharacter.name}  />

@@ -4,8 +4,7 @@ export const StyledCharacterSwitcher = styled.div`
 
     height: 30vh;
 
-    .container {
-        
+    .container {     
         margin: 0 auto;
         display: flex;
     }

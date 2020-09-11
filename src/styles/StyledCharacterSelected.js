@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledCharacterSelected= styled.div`
 
-    height: 55vh;
+    height: 45vh;
+    padding: 5vh 0 5vh 0;
     width: 100%;
     .centered {
         margin: 0 auto;
