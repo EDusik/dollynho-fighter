@@ -6,7 +6,6 @@ This project uses these technologies:
 - [React](https://reactjs.org)
 
 ## :computer: Commands 
-### :memo: Npm
 ```npm
 npm install
 ```
