@@ -15,4 +15,4 @@ npm start
 ```
 
 ## :full_moon_with_face: Note
-**under development**
+**Under development**
