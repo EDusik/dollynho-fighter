@@ -1,4 +1,4 @@
-## :full_moon_with_face: About
+## :melon: About
 This project was inspired by the union of fighting games like street fighter and the legendary Brazilian character <b>Dolly</b>
 
 ## :rocket: Technologies
@@ -14,5 +14,5 @@ npm install
 npm start
 ```
 
-## :melon:
+## :full_moon_with_face: Note
 **under development**
