@@ -4,6 +4,7 @@ This project was inspired by the union of fighting games like street fighter and
 ## :rocket: Technologies
 This project uses these technologies:
 - [React](https://reactjs.org)
+- [React Context](https://reactjs.org/docs/context.html)
 
 ## :computer: Commands 
 ```npm
